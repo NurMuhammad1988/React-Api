@@ -1,22 +1,16 @@
 import './App.css';
-
-// import UserList from './Components/UserLIst';
-// import UserList2 from './Components/UserList2';
-import PostUsers from './Components/PostUsers';
-
-
+import * as React from 'react';
+import Create from './Components/Create'
+import 'reactstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-
-      {/*<Userlist />*/}
-      {/*<UserList2 />*/}
-      <PostUsers />
-
-
-
+    <div className="main">
+      <h2 className="main-header">React Crud Operations</h2>
+      <Create />
     </div>
+
   );
 }
 
