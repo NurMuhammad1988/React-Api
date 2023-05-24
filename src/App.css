@@ -51,7 +51,7 @@
 }
 
 .create-form label{
-  color: whitesmoke !important;
+  color: whitesmoke !important; 
   font-family: 'Montserrat', sans-serif;
   font-size: 12px !important;
 }
@@ -64,4 +64,21 @@
   background-color: #212121;
   color: whitesmoke;
   flex-direction: column;
+}
+
+.create-form label{
+  color: whitesmoke !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px !important;
+}
+
+.table{
+background-color: white;}
+
+Table.HeaderCell{
+  color: aliceblue;
+}
+
+.tablesss{
+  background-color: indigo;
 }

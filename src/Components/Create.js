@@ -1,7 +1,7 @@
-// import React from 'react'
-import { FormGroup, Form, Label, Input, Button, Col, Row,  } from 'reactstrap'
+import { FormGroup, Form, Label, Input, Button, Col, Row, } from 'reactstrap'
 import React, { useState } from 'react';
 import axios from 'axios'
+// import  { useHistory } from 'react-router';
 
 export default function Create() {
 
@@ -9,9 +9,15 @@ export default function Create() {
     const [lastName, setLastName] = useState('');
     const [checkbox, setCheckbox] = useState(false);
 
+    // let history = useHistory();
+
     const postData = () => {
-        axios.post(`https://646bb15b7d3c1cae4ce4298b.mockapi.io/react-crud/users`, {firstName, lastName, checkbox})
-}
+        axios.post(`https://646cc3977b42c06c3b2bf95f.mockapi.io/users`, { firstName, lastName, checkbox })
+            .then(() => {
+                // history.push('/read')
+            })
+    }
+
 
 
     return (
@@ -20,31 +26,27 @@ export default function Create() {
                 <Row className="row-cols-lg-auto g-3 align-items-center p-5">
                     <Col className='col-xxl-12  col-xl-12 col-lg-12 col-md-12 col-12 '>
                         <Label
-                            className=""
-                            for="exampleEmail"
                         >
-                            Email
+                            Name
                         </Label>
                         <Input
-                            id="exampleEmail"
-                            name="email"
-                            placeholder="something@idk.cool"
-                            type="email"
+                            id="FirstName"
+                            name="Firstname"
+                            placeholder="First Name"
+                            type="text"
                             onChange={(e) => setFirstName(e.target.value)}
                         />
                     </Col>
                     <Col className='col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-12 '>
                         <Label
-                            className=""
-                            for="examplePassword"
                         >
-                            Password
+                            Last Name
                         </Label>
                         <Input
-                            id="examplePassword"
-                            name="password"
-                            placeholder="don't tell!"
-                            type="password"
+                             id="LastName"
+                            name="Lastname"
+                            placeholder="Last Name"
+                            type="text"
                             onChange={(e) => setLastName(e.target.value)}
                         />
                     </Col>
@@ -65,13 +67,13 @@ export default function Create() {
                         </FormGroup>
                     </Col>
 
-                  
+
 
                     <Col className='col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-12  '>
 
-                    <Button className='btn btn-danger  w-100' onClick={postData}>Submit</Button>
+                        <Button className='btn btn-danger  w-100' onClick={postData}>Submit</Button>
 
-                        
+
                     </Col>
                 </Row>
             </Form>
