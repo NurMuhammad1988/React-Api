@@ -22,10 +22,12 @@ export default function Create() {
 
     return (
         <Row className='flex-wrap'>
-            <Form>
-                <Row className="row-cols-lg-auto g-3 align-items-center p-5">
-                    <Col className='col-xxl-12  col-xl-12 col-lg-12 col-md-12 col-12 '>
-                        <Label
+            <Form data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+                <Row  className="row-cols-lg-auto g-3 align-items-center p-5">
+                    <Col     className='col-xxl-12  col-xl-12 col-lg-12 col-md-12 col-12 '>
+                        <Label 
                         >
                             Name
                         </Label>
@@ -69,7 +71,7 @@ export default function Create() {
 
 
 
-                    <Col className='col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-12  '>
+                    <Col  className='col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-12  '>
 
                         <Button className='btn btn-danger  w-100' onClick={postData}>Submit</Button>
 
